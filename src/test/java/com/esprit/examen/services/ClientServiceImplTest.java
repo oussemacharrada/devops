@@ -59,7 +59,7 @@ public class ClientServiceImplTest {
 		Date dateNaissance = dateFormat.parse("30/09/2000");
 		List<Client> clients = clientService.retrieveAllClients();
 		int expected = clients.size();
-		Client c = new Client(charrada", "oussema", dateNaissance, "oussema.charrada@esprit.tn", "pwd", Profession.Cadre,
+		Client c = new Client("charrada", "oussema", dateNaissance, "oussema.charrada@esprit.tn", "pwd", Profession.Cadre,
 				CategorieClient.Ordinaire);
 		Client client = clientService.addClient(c);
 		assertEquals(expected + 1, clientService.retrieveAllClients().size());
